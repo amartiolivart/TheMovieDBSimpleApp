@@ -3,4 +3,5 @@
     <string name="title_placeholder">Title Not Available</string>
     <string name="average_vote_placeholder">N/A</string>
     <string name="base_url">https://api.themoviedb.org/3/tv/popular?api_key=</string>
+    <string name="image_base_url">"http://image.tmdb.org/t/p/w500/</string>
 </resources>

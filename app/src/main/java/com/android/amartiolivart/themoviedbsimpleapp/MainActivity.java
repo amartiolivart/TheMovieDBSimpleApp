@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        scrollAdapter = new ScrollAdapter();
+        scrollAdapter = new ScrollAdapter(this);
         recyclerView.setAdapter(scrollAdapter);
         addDataToList();
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
 
     private String getTvShowURL(){
         urlPageCounter++;
-        return R.string.base_url + getApiKeyTMDB() +"&language=es-ES&page=" + urlPageCounter;
+        return getString(R.string.base_url) + getApiKeyTMDB() +"&language=es-ES&page=" + urlPageCounter;
     }
 
     private String getApiKeyTMDB(){

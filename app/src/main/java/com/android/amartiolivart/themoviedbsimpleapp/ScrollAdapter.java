@@ -1,5 +1,6 @@
 package com.android.amartiolivart.themoviedbsimpleapp;
 
+import android.content.Context;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.amartiolivart.themoviedbsimpleapp.glide.GlideApp;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;
 
 import java.util.ArrayList;
@@ -20,9 +22,11 @@ import java.util.List;
 public class ScrollAdapter extends RecyclerView.Adapter<ScrollAdapter.ViewHolder> {
 
     private List<TvShow> showsList;
+    private Context ctx;
 
 
-    public ScrollAdapter() {
+    public ScrollAdapter(Context ctx) {
+        this.ctx = ctx;
         this.showsList = new ArrayList<>();
     }
 
@@ -37,7 +41,7 @@ public class ScrollAdapter extends RecyclerView.Adapter<ScrollAdapter.ViewHolder
         TvShow show = showsList.get(position);
         holder.titleView.setText(show.getTitle());
         // TODO Glide
-        // holder.imageView.setText(movie.getGenre());
+        GlideApp.with(ctx).load(ctx.getString(R.string.image_base_url) + show.getImage()).into(holder.imageView);
         holder.voteView.setText(show.getVoteAverage());    }
 
     @Override
