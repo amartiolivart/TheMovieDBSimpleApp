@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_item_list"
+    android:layout_margin="1dp"
+    android:layout_height="200dp"
+    android:layout_width="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/image_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"/>
+
+    <LinearLayout
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_inner_item_list"
+        >
+
+        <TextView
+            android:id="@+id/title_show"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:gravity="left|center_vertical"
+            android:padding="2dp"
+            android:layout_weight="1"
+            android:text="@string/title_placeholder"
+            />
+
+        <RelativeLayout
+            android:id="@+id/average_vote_show_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            >
+
+            <ImageView
+                android:id="@+id/average_vote_show_star"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="1dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/popularity_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/average_vote_show_star"
+                android:paddingLeft="3dp"
+                android:text="@string/average_vote_placeholder"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
