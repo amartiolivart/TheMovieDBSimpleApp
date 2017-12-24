@@ -1,4 +1,4 @@
-package com.android.amartiolivart.themoviedbsimpleapp;
+package com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.amartiolivart.themoviedbsimpleapp.R;
 import com.android.amartiolivart.themoviedbsimpleapp.glide.GlideApp;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;
 

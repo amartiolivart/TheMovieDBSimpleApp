@@ -1,4 +1,4 @@
-package com.android.amartiolivart.themoviedbsimpleapp;
+package com.android.amartiolivart.themoviedbsimpleapp.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.android.amartiolivart.themoviedbsimpleapp.R;
+import com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents.ScrollAdapter;
+import com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents.ScrollListener;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.LoadTvShowsAsyncTask;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.TaskCallback;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;

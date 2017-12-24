@@ -1,4 +1,4 @@
-package com.android.amartiolivart.themoviedbsimpleapp;
+package com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;

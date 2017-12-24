@@ -1,4 +1,4 @@
-package com.android.amartiolivart.themoviedbsimpleapp;
+package com.android.amartiolivart.themoviedbsimpleapp.Activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.android.amartiolivart.themoviedbsimpleapp.R;
+import com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents.ScreenSlidePageFragment;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.LoadTvShowsAsyncTask;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.TaskCallback;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;

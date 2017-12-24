@@ -1,6 +1,5 @@
-package com.android.amartiolivart.themoviedbsimpleapp;
+package com.android.amartiolivart.themoviedbsimpleapp.Activities.ScrollComponents;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
@@ -10,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.amartiolivart.themoviedbsimpleapp.R;
 import com.android.amartiolivart.themoviedbsimpleapp.glide.GlideApp;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;
 
