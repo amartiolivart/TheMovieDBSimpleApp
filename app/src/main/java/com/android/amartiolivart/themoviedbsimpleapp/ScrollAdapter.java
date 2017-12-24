@@ -1,7 +1,6 @@
 package com.android.amartiolivart.themoviedbsimpleapp;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;

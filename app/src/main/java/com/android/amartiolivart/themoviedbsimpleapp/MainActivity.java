@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.android.amartiolivart.themoviedbsimpleapp.tasks.LoadPopularTvShowsAsyncTask;
+import com.android.amartiolivart.themoviedbsimpleapp.tasks.LoadTvShowsAsyncTask;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.TaskCallback;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback, Scr
 
     private void addDataToList() {
         progressBar.setVisibility(View.VISIBLE);
-        LoadPopularTvShowsAsyncTask tvShowsAsyncTask = new LoadPopularTvShowsAsyncTask(this);
+        LoadTvShowsAsyncTask tvShowsAsyncTask = new LoadTvShowsAsyncTask(this);
         tvShowsAsyncTask.execute(getTvShowURL());
     }
 

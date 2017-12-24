@@ -1,5 +1,6 @@
 package com.android.amartiolivart.themoviedbsimpleapp.tasks;
 
+
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -20,15 +21,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amartiolivart on 23/12/17.
+ * Created by amartiolivart on 24/12/17.
  */
 
-public class LoadPopularTvShowsAsyncTask extends AsyncTask<String, Void, List<?>> {
-
-    private static final String TAG = LoadPopularTvShowsAsyncTask.class.getSimpleName();
+public class LoadTvShowsAsyncTask extends AsyncTask<String, Void, List<?>>  {
+    private static final String TAG = LoadTvShowsAsyncTask.class.getSimpleName();
     private TaskCallback callback;
 
-    public LoadPopularTvShowsAsyncTask(TaskCallback mainActivity) {
+    public LoadTvShowsAsyncTask(TaskCallback mainActivity) {
         this.callback = mainActivity;
     }
 
@@ -109,9 +109,6 @@ public class LoadPopularTvShowsAsyncTask extends AsyncTask<String, Void, List<?>
             try {
                 String res = result.toString();
 
-                // Remove special blank characters JiC
-                //res = res.replaceAll("[^\\x20-\\x7e]", "");
-
                 // Get just the TvShows
                 JSONObject jObjAll = new JSONObject(res);
                 String results = jObjAll.getString("results");
@@ -151,4 +148,5 @@ public class LoadPopularTvShowsAsyncTask extends AsyncTask<String, Void, List<?>
             parseJson(jarr.getJSONObject(i), data);
         }
     }
+
 }
