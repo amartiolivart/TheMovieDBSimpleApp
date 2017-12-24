@@ -25,17 +25,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/overviewMarginParent"
             android:layout_weight="1">
 
             <TextView
                 android:background="@drawable/background_inner_item_list"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/whiteText"
                 android:id="@+id/overview_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="10dp"
+                android:padding="@dimen/overviewPadding"
                 android:scrollbars = "vertical"
                 />
 

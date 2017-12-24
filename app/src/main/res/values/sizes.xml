@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_bar_width">100dp</dimen>
+    <dimen name="progress_bar_height">100dp</dimen>
+    <dimen name="progress_bar_padding">5dp</dimen>
+
+    <!-- Main item list-->
+    <dimen name="parentMainViewMargin">1dp</dimen>
+    <dimen name="parentMainViewHeight">200dp</dimen>
+    <dimen name="showImageMainViewPadding">3dp</dimen>
+    <dimen name="parentTopBarElementLeftRightMargin">1dp</dimen>
+    <dimen name="parentTopBarElementHeight">50dp</dimen>
+    <dimen name="topBarTextElementTopBottomMargin">1dp</dimen>
+    <dimen name="topBarTextElementLeftMargin">3dp</dimen>
+    <dimen name="topBarTextElementPadding">2dp</dimen>
+
+    <dimen name="radiusMainListElement">3dp</dimen>
+    <dimen name="strokeMainListElement">1dp</dimen>
+
+
+    <dimen name="ratingPaddingLeftRight">10dp</dimen>
+    <dimen name="iconRatingSize">50dp</dimen>
+    <dimen name="iconRatingPadding">1dp</dimen>
+    <dimen name="iconRatingMargin">4dp</dimen>
+
+    <dimen name="overviewPadding">10dp</dimen>
+    <dimen name="overviewMarginParent">10dp</dimen>
+    <dimen name="paddingLeftPopularity">3dp</dimen>
+
+
+</resources>

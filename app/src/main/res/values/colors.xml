@@ -2,5 +2,16 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!-- Main Screen-->
+    <color name="mainScreenBackground">#333333</color>
+
+    <!-- List Element -->
+    <color name="headerColor">#99000000</color>
+    <color name="strokeColor">#000000</color>
+
+    <!-- Text Colors-->
+    <color name="whiteText">#FFFFFF</color>
+
 </resources>

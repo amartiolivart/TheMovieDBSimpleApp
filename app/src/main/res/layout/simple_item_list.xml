@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background_item_list"
-    android:layout_margin="1dp"
-    android:layout_height="200dp"
+    android:layout_margin="@dimen/parentMainViewMargin"
+    android:layout_height="@dimen/parentMainViewHeight"
     android:layout_width="match_parent"
     >
 
@@ -13,15 +13,15 @@
         android:id="@+id/image_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="3dp"
+        android:padding="@dimen/showImageMainViewPadding"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder"/>
 
     <LinearLayout
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
+        android:layout_marginLeft="@dimen/parentTopBarElementLeftRightMargin"
+        android:layout_marginRight="@dimen/parentTopBarElementLeftRightMargin"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/parentTopBarElementHeight"
         android:orientation="horizontal"
         android:background="@drawable/background_inner_item_list"
         >
@@ -31,12 +31,12 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="@dimen/topBarTextElementTopBottomMargin"
+            android:layout_marginTop="@dimen/topBarTextElementTopBottomMargin"
+            android:layout_marginLeft="@dimen/topBarTextElementLeftMargin"
             android:gravity="left|center_vertical"
-            android:padding="2dp"
-            android:textColor="#FFFFFF"
+            android:padding="@dimen/topBarTextElementPadding"
+            android:textColor="@color/whiteText"
             android:layout_weight="1"
             android:text="@string/title_placeholder"
             />
@@ -45,18 +45,18 @@
             android:id="@+id/average_vote_show_relative"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="@dimen/ratingPaddingLeftRight"
+            android:paddingRight="@dimen/ratingPaddingLeftRight"
             android:layout_weight="1"
             android:gravity="right"
             >
 
             <ImageView
                 android:id="@+id/average_vote_show_star"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="1dp"
-                android:layout_margin="4dp"
+                android:layout_width="@dimen/iconRatingSize"
+                android:layout_height="@dimen/iconRatingSize"
+                android:padding="@dimen/iconRatingPadding"
+                android:layout_margin="@dimen/iconRatingMargin"
                 android:layout_centerVertical="true"
                 android:src="@drawable/star" />
 
@@ -66,8 +66,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@+id/average_vote_show_star"
-                android:paddingLeft="3dp"
-                android:textColor="#FFFFFF"
+                android:paddingLeft="@dimen/paddingLeftPopularity"
+                android:textColor="@color/whiteText"
                 android:text="@string/average_vote_placeholder"
                 android:textStyle="bold" />
 
