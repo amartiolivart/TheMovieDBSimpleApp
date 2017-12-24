@@ -110,7 +110,7 @@ public class LoadPopularTvShowsAsyncTask extends AsyncTask<String, Void, List<?>
                 String res = result.toString();
 
                 // Remove special blank characters JiC
-                res = res.replaceAll("[^\\x20-\\x7e]", "");
+                //res = res.replaceAll("[^\\x20-\\x7e]", "");
 
                 // Get just the TvShows
                 JSONObject jObjAll = new JSONObject(res);
@@ -135,9 +135,13 @@ public class LoadPopularTvShowsAsyncTask extends AsyncTask<String, Void, List<?>
 
     protected void parseJson(JSONObject tvS, List<Object> data) throws JSONException {
         TvShow tvShow = new TvShow(
-                tvS.getString("poster_path")
-                , tvS.getString("original_name")
+                tvS.getString("backdrop_path")
+                // TODO what should we print? Name or original Name?
+                , tvS.getString("name")
                 , tvS.getString("vote_average")
+                , tvS.getString("id")
+                , tvS.getString("overview")
+                , tvS.getString("poster_path")
         );
         data.add(tvShow);
     }

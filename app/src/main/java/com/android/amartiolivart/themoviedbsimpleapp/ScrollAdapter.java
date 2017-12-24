@@ -23,11 +23,13 @@ public class ScrollAdapter extends RecyclerView.Adapter<ScrollAdapter.ViewHolder
 
     private List<TvShow> showsList;
     private Context ctx;
+    private ItemClickListener itemClickListener;
 
 
-    public ScrollAdapter(Context ctx) {
+    public ScrollAdapter(Context ctx, ItemClickListener itemClickListener) {
         this.ctx = ctx;
         this.showsList = new ArrayList<>();
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
@@ -38,11 +40,17 @@ public class ScrollAdapter extends RecyclerView.Adapter<ScrollAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        TvShow show = showsList.get(position);
+        final TvShow show = showsList.get(position);
         holder.titleView.setText(show.getTitle());
-        // TODO Glide
         GlideApp.with(ctx).load(ctx.getString(R.string.image_base_url) + show.getImage()).into(holder.imageView);
-        holder.voteView.setText(show.getVoteAverage());    }
+        holder.voteView.setText(show.getVoteAverage());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                itemClickListener.onItemClick(show);
+            }
+        });
+    }
 
     @Override
     public int getItemCount() {
@@ -64,5 +72,9 @@ public class ScrollAdapter extends RecyclerView.Adapter<ScrollAdapter.ViewHolder
             imageView = itemView.findViewById(R.id.image_show);
             voteView = itemView.findViewById(R.id.popularity_show);
         }
+    }
+
+    public interface ItemClickListener {
+        void onItemClick(TvShow tvShow);
     }
 }

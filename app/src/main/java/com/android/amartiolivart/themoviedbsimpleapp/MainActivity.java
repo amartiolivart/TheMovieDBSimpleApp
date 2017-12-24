@@ -1,5 +1,6 @@
 package com.android.amartiolivart.themoviedbsimpleapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,10 +10,11 @@ import android.widget.ProgressBar;
 
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.LoadPopularTvShowsAsyncTask;
 import com.android.amartiolivart.themoviedbsimpleapp.tasks.TaskCallback;
+import com.android.amartiolivart.themoviedbsimpleapp.tasks.data.TvShow;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements TaskCallback {
+public class MainActivity extends AppCompatActivity implements TaskCallback, ScrollAdapter.ItemClickListener {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        scrollAdapter = new ScrollAdapter(this);
+        scrollAdapter = new ScrollAdapter(this, this);
         recyclerView.setAdapter(scrollAdapter);
         addDataToList();
 
@@ -68,5 +70,15 @@ public class MainActivity extends AppCompatActivity implements TaskCallback {
         scrollAdapter.setTvShows(tvShows);
         scrollAdapter.notifyDataSetChanged();
         progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onItemClick(TvShow show) {
+        // Serializable instead of Parcelable due to the low amount of data passed between activities
+        Intent i = new Intent(this, DetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("tvShow", show);
+        i.putExtras(bundle);
+        startActivity(i);
     }
 }
