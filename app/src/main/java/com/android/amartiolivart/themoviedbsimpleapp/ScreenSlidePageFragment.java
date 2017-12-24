@@ -48,7 +48,11 @@ public class ScreenSlidePageFragment extends Fragment {
 
         // SetUp
         GlideApp.with(this).load(getString(R.string.image_base_url) + show.getPosterPath()).into(poster);
-        overView.setText(show.getOverview());
+        if ("null".equals(show.getOverview())){
+            overView.setText(R.string.no_description);
+        }else{
+            overView.setText(show.getOverview());
+        }
         overView.setMovementMethod(new ScrollingMovementMethod());
 
         return view;

@@ -5,4 +5,5 @@
     <string name="base_url">https://api.themoviedb.org/3/tv/popular?api_key=</string>
     <string name="image_base_url">http://image.tmdb.org/t/p/w500/</string>
     <string name="base_similar_url">https://api.themoviedb.org/3/tv/((show_id))/similar?api_key=((api_key))</string>
+    <string name="no_description">Sin descripción disponible</string>
 </resources>
